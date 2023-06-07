@@ -8,14 +8,10 @@ const NavBar = () => {
         <p className="text-indigo-500">LinguaMastery</p>
       </div>
       <div className="flex gap-5 font-bold">
-        <Link className="text-slate-500 hover:text-slate-700">Courses</Link>
-        <Link className="text-slate-500 hover:text-slate-700">My Classes</Link>
-        <Link className="text-slate-500 hover:text-slate-700">
-          Enrolled Classes
-        </Link>
-        <Link className="text-slate-500 hover:text-slate-700">
-          How it Works
-        </Link>
+        <Link className="text-slate-500 hover:text-slate-700">Home</Link>
+        <Link className="text-slate-500 hover:text-slate-700">Instructors</Link>
+        <Link className="text-slate-500 hover:text-slate-700">Classes</Link>
+        <Link className="text-slate-500 hover:text-slate-700">Dashboard</Link>
         <Link className="text-slate-500 hover:text-slate-700">About</Link>
       </div>
       <div>

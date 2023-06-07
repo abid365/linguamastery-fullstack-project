@@ -1,4 +1,5 @@
 import React from "react";
+import Learning from "../Learning/Learning";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
             communicator. Join our community of language enthusiasts and embark
             on a journey of cultural discovery
           </p>
-          <button className="px-2 pt-2 pb-1 border border-slate-200 rounded-3xl bg-purple-400 hover:bg-purple-500 text-white">
+          <button className="px-2 pt-2 pb-1 border border-slate-200 font-bold text-2xl rounded-lg bg-indigo-500 text-white hover:bg-indigo-300 hover:text-slate-700">
             Get Started
           </button>
         </div>
@@ -34,6 +35,7 @@ const Home = () => {
           />
         </div>
       </div>
+      <Learning></Learning>
     </div>
   );
 };
