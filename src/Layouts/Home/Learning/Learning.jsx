@@ -5,18 +5,18 @@ const Learning = () => {
   return (
     <div className="mt-10 grid grid-cols-1 gap-5 lg:flex lg:justify-between lg:flex-row">
       {/* 1st card */}
-      <div className="border border-opacity-100 pt-4 pb-1 px-3 lg:w-fit w-full rounded-2xl bg-black">
-        <h1 className="capitalize text-white text-2xl lg:text-3xl font-bold">
+      <div className="border border-opacity-100 pt-5 pb-1 px-3 lg:w-fit w-full rounded-2xl bg-black">
+        <h1 className="capitalize text-white text-xl lg:text-2xl font-bold">
           Study At your<br></br> own pace
         </h1>
-        <div className="flex items-center gap-2">
+        <div>
           <small className="text-white py-2">
             Studying at your own pace<br></br> empowers you to embrace
             knowledge's<br></br> journey and unlock your full learning
             potential.
           </small>
-          <BsFillArrowRightCircleFill className="text-indigo-500 text-2xl my-3"></BsFillArrowRightCircleFill>
         </div>
+        <BsFillArrowRightCircleFill className="text-indigo-500 text-2xl my-3"></BsFillArrowRightCircleFill>
       </div>
       {/* 2nd card */}
       <div className="lg:w-fit w-full border-2 border-slate-600 shadow-md pt-4 pb-1 px-3 rounded-2xl">
