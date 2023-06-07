@@ -1,5 +1,6 @@
 import React from "react";
 import Learning from "../Learning/Learning";
+import TopSlider from "../TopSlider/TopSlider";
 
 const Home = () => {
   return (
@@ -36,6 +37,7 @@ const Home = () => {
         </div>
       </div>
       <Learning></Learning>
+      <TopSlider></TopSlider>
     </div>
   );
 };
