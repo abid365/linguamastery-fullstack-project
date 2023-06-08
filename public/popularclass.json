@@ -1,0 +1,38 @@
+[
+  {
+    "language": "Spanish",
+    "teacher": "María Rodríguez",
+    "rating": 4.7,
+    "enrolled_students": 120
+  },
+  {
+    "language": "Bangla",
+    "teacher": "Rahim Khan",
+    "rating": 4.9,
+    "enrolled_students": 90
+  },
+  {
+    "language": "English",
+    "teacher": "John Smith",
+    "rating": 4.5,
+    "enrolled_students": 75
+  },
+  {
+    "language": "French",
+    "teacher": "Sophie Dubois",
+    "rating": 4.8,
+    "enrolled_students": 110
+  },
+  {
+    "language": "German",
+    "teacher": "Hans Müller",
+    "rating": 4.6,
+    "enrolled_students": 95
+  },
+  {
+    "language": "Chinese",
+    "teacher": "Li Wei",
+    "rating": 4.7,
+    "enrolled_students": 80
+  }
+]

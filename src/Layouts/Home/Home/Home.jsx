@@ -1,6 +1,7 @@
 import React from "react";
 import Learning from "../Learning/Learning";
 import TopSlider from "../TopSlider/TopSlider";
+import Popular from "../Popular Class/Popular";
 
 const Home = () => {
   return (
@@ -38,6 +39,7 @@ const Home = () => {
       </div>
       <Learning></Learning>
       <TopSlider></TopSlider>
+      <Popular></Popular>
     </div>
   );
 };
