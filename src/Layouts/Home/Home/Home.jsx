@@ -2,6 +2,7 @@ import React from "react";
 import Learning from "../Learning/Learning";
 import TopSlider from "../TopSlider/TopSlider";
 import Popular from "../Popular Class/Popular";
+import PopIns from "../Popular Instructors/PopIns";
 
 const Home = () => {
   return (
@@ -40,6 +41,7 @@ const Home = () => {
       <Learning></Learning>
       <TopSlider></TopSlider>
       <Popular></Popular>
+      <PopIns></PopIns>
     </div>
   );
 };

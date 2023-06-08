@@ -25,9 +25,12 @@ const NavBar = () => {
         </Link>
       </div>
       <div>
-        <button className=" pt-2 pb-1 px-3 font-bold border border-slate-700 rounded-2xl bg-white opacity-70 hover:bg-black hover:text-white hover:shadow-md">
+        <Link
+          to="/login"
+          className=" pt-2 pb-1 px-3 font-bold border border-slate-700 rounded-2xl bg-white opacity-70 hover:bg-black hover:text-white hover:shadow-md"
+        >
           Join Our Courses
-        </button>
+        </Link>
       </div>
     </div>
   );

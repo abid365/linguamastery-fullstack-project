@@ -5,6 +5,9 @@ import Instructors from "../Layouts/Instructors/Instructors";
 import Classes from "../Layouts/Classes/Classes";
 import Dashboard from "../Layouts/Dashboard/Dashboard";
 import About from "../Layouts/About/About";
+import LogIn from "../Layouts/Login/LogIn";
+import SignUp from "../Layouts/SignUp/SignUp";
+import ErrorElement from "../Components/ErrorElement";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +34,16 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>,
       },
+      {
+        path: "/login",
+        element: <LogIn></LogIn>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
     ],
+    errorElement: <ErrorElement></ErrorElement>,
   },
 ]);
 
