@@ -17,7 +17,7 @@ const SingleClass = (props) => {
 
   return (
     <div>
-      <div className="w-72 rounded-3xl px-5 py-4 justify-self-center shadow-lg border-2 border-slate-800">
+      <div className="w-72 rounded-3xl px-5 py-4 justify-self-center shadow-lg border-2 border-slate-800 bg-slate-50">
         <div className="flex justify-between">
           <h1 className="text-lg font-bold w-4/5 text-slate-800">{title}</h1>
           <div className="badge badge-neutral pt-2">{rating}</div>
@@ -40,7 +40,7 @@ const SingleClass = (props) => {
               Students: {enrolled_students}
             </p>
           </div>
-          <Link className="text-2xl ml-5">
+          <Link className="text-2xl hover:text-indigo-500 ml-5">
             <BsFillArrowUpRightCircleFill></BsFillArrowUpRightCircleFill>{" "}
           </Link>
         </div>
