@@ -16,7 +16,10 @@ const Popular = () => {
       <h1 className="text-center font-bold text-3xl lg:text-5xl text-black underline decoration-wavy">
         Our Popular Classes
       </h1>
-      <div>
+      <p className="text-center mt-2">
+        Master the World's Languages with Our Diverse Language Courses!
+      </p>
+      <div className="mt-10 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 ml-7">
         {classes.map(
           (sclass) => (
             <SingleClass
