@@ -14,17 +14,17 @@ const Popular = () => {
   return (
     <div className="my-20 border-t-2 pt-10 relative">
       <img
-        className="absolute -z-10 top-28"
+        className="absolute -z-10 top-44"
         src="/src/assets/Mass Circles.svg"
         alt=""
       />
-      <h1 className="text-center font-bold text-3xl lg:text-5xl text-black underline decoration-wavy">
+      <h1 className="text-center font-bold text-3xl lg:text-5xl text-black bg-gradient-to-r from-indigo-500 to-purple-400 text-transparent bg-clip-text pt-6">
         Our Popular Classes
       </h1>
       <p className="text-center mt-2">
         Master the World's Languages with Our Diverse Language Courses!
       </p>
-      <div className="mt-10 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 ml-7">
+      <div className="mt-10 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 lg:ml-16 ml-7">
         {classes.map(
           (sclass) => (
             <SingleClass
