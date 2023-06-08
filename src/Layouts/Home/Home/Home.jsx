@@ -3,6 +3,7 @@ import Learning from "../Learning/Learning";
 import TopSlider from "../TopSlider/TopSlider";
 import Popular from "../Popular Class/Popular";
 import PopIns from "../Popular Instructors/PopIns";
+import WhoWeAre from "../WhoWeAre/WhoWeAre";
 
 const Home = () => {
   return (
@@ -41,6 +42,7 @@ const Home = () => {
       <Learning></Learning>
       <TopSlider></TopSlider>
       <Popular></Popular>
+      <WhoWeAre></WhoWeAre>
       <PopIns></PopIns>
     </div>
   );
