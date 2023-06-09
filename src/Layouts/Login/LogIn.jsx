@@ -1,10 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
+import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 
 const LogIn = () => {
   const { logIn } = useContext(AuthContext);
+  const [passVisible, setPassVisible] = useState(false);
+  const [password, setPassword] = useState("");
+
+  const toggler = () => {
+    setPassVisible(!passVisible);
+  };
+
   const {
     register,
     handleSubmit,
@@ -45,13 +53,25 @@ const LogIn = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input
-                  type="password"
-                  placeholder="password"
-                  name="password"
-                  className="input input-bordered"
-                  {...register("password", { required: true })}
-                />
+                <div className="flex items-center gap-1">
+                  <input
+                    type={passVisible ? "text" : "password"}
+                    placeholder="password"
+                    name="password"
+                    className="input input-bordered"
+                    {...register("password", { required: true })}
+                  />
+                  <button
+                    onClick={toggler}
+                    className="border py-3 px-1 rounded-lg border-slate-300"
+                  >
+                    {passVisible ? (
+                      <BsFillEyeSlashFill className="text-indigo-400"></BsFillEyeSlashFill>
+                    ) : (
+                      <BsFillEyeFill className="text-indigo-400"></BsFillEyeFill>
+                    )}
+                  </button>
+                </div>
                 <label className="label">
                   <small className="hover:text-slate-500 mt-1 pt-1">
                     Don't have an account?{" "}
