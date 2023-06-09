@@ -1,47 +1,51 @@
 import React from "react";
+import { BsFillPeopleFill } from "react-icons/bs";
 
-const PopInsTable = () => {
+const PopInsTable = (props) => {
+  const {
+    language,
+    rating,
+    teacher,
+    enrolled_students,
+    image_url,
+    title,
+    description,
+  } = props.instructor;
   return (
-    <div>
-      <table className="table">
-        {/* head */}
-
-        <tbody>
-          {/* row 1 */}
-          <tr>
-            <td>
-              <div className="flex items-center space-x-3">
-                <div className="avatar">
-                  <div className="mask mask-squircle w-12 h-12">
-                    <img
-                      src="/tailwind-css-component-profile-2@56w.png"
-                      alt="Avatar Tailwind CSS Component"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-bold">Hart Hagerty</div>
-                  <div className="text-sm opacity-50">United States</div>
+    <tbody>
+      {/* row 1 */}
+      <tr>
+        <td>
+          <div className="flex items-center space-x-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={image_url} alt="Avatar Tailwind CSS Component" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold text-slate-500">{teacher}</div>
+              <div className="text-sm opacity-50">
+                <div className="badge badge-neutral pt-1 text-white">
+                  {rating}
                 </div>
               </div>
-            </td>
-            <td>
-              Zemlak, Daniel and Leannon
-              <br />
-              <span className="badge badge-ghost badge-sm">
+            </div>
+          </div>
+        </td>
+        <td>
+          <BsFillPeopleFill className="inline-block text-slate-500"></BsFillPeopleFill>{" "}
+          {enrolled_students}
+          {/* <span className="badge badge-ghost badge-sm">
                 Desktop Support Technician
-              </span>
-            </td>
-            <td>Purple</td>
-            <th>
-              <button className="btn btn-ghost btn-xs">details</button>
-            </th>
-          </tr>
-          {/* row 2 */}
-        </tbody>
-        {/* foot */}
-      </table>
-    </div>
+              </span> */}
+        </td>
+        <td className="text-slate-800">{language} Instructor</td>
+        <td>
+          <button className="btn btn-ghost btn-xs">details</button>
+        </td>
+      </tr>
+      {/* row 2 */}
+    </tbody>
   );
 };
 
