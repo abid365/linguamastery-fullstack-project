@@ -3,6 +3,8 @@ import { AuthContext } from "../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const { signUp } = useContext(AuthContext);
@@ -22,7 +24,26 @@ const SignUp = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    signUp(data.email, data.password)
+      .then((res) => {
+        const signedUser = res.user;
+        // console.log(signedUser);
+        if (signedUser) {
+          toast("❤️️ Account Created Successfully", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const password = watch("password");
@@ -34,6 +55,18 @@ const SignUp = () => {
 
   return (
     <div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <div className="hero min-h-screen">
         <div>
           <div className="card border-2 border-slate-800 flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
