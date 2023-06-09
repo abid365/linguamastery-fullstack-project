@@ -42,8 +42,8 @@ const Home = () => {
       <Learning></Learning>
       <TopSlider></TopSlider>
       <Popular></Popular>
-      <WhoWeAre></WhoWeAre>
       <PopIns></PopIns>
+      <WhoWeAre></WhoWeAre>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { MdTipsAndUpdates } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const SingleClass = (props) => {
-  console.log(props.singleclass);
+  // console.log(props.singleclass);
   const {
     language,
     rating,
