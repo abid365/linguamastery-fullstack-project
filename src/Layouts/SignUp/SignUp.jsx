@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
-  const { signUp } = useContext(AuthContext);
+  const { signUp, updateUserProfile } = useContext(AuthContext);
   const [passVisible, setPassVisible] = useState(false);
   // const [matchPass, setMatchPass] = useState(false);
+  // const navigate = useNavigate();
 
   const toggler = () => {
     setPassVisible(!passVisible);
@@ -26,20 +27,40 @@ const SignUp = () => {
   const onSubmit = (data) => {
     signUp(data.email, data.password)
       .then((res) => {
-        const signedUser = res.user;
-        // console.log(signedUser);
-        if (signedUser) {
-          toast("❤️️ Account Created Successfully", {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
+        updateUserProfile(data.name, data.photoURL)
+          .then(() => {
+            console.log("User Updated With Photo and name");
+            const signedUser = res.user;
+            // console.log(signedUser);
+            if (signedUser) {
+              toast("❤️️ Account Created Successfully", {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+              reset();
+              // navigate("/");
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            toast("An Error Occured", {
+              position: "bottom-center",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "dark",
+            });
+            reset();
           });
-        }
       })
       .catch((error) => {
         console.log(error);
