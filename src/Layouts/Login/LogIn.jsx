@@ -7,7 +7,6 @@ import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 const LogIn = () => {
   const { logIn } = useContext(AuthContext);
   const [passVisible, setPassVisible] = useState(false);
-  const [password, setPassword] = useState("");
 
   const toggler = () => {
     setPassVisible(!passVisible);
@@ -16,7 +15,7 @@ const LogIn = () => {
   const {
     register,
     handleSubmit,
-    watch,
+    reset,
     formState: { errors },
   } = useForm();
 
