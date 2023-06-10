@@ -11,7 +11,8 @@
     "title": "¡Hola! Speak Spanish like a Native!",
     "classes_taken": 10,
     "available_seats": 30,
-    "course_price": 50
+    "course_price": 50,
+    "course_img": "https://example.com/spanish-course-image.jpg"
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
     "title": "Unveiling Bangla: Unlock the Language's Richness",
     "classes_taken": 8,
     "available_seats": 42,
-    "course_price": 40
+    "course_price": 40,
+    "course_img": "https://example.com/bangla-course-image.jpg"
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
     "title": "English Mastery: Communicate with Confidence",
     "classes_taken": 5,
     "available_seats": 45,
-    "course_price": 60
+    "course_price": 60,
+    "course_img": "https://example.com/english-course-image.jpg"
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "title": "Bonjour! Embrace the Charm of French Language",
     "classes_taken": 12,
     "available_seats": 18,
-    "course_price": 55
+    "course_price": 55,
+    "course_img": "https://example.com/french-course-image.jpg"
   },
   {
     "id": 5,
@@ -64,10 +68,11 @@
     "enrolled_students": "95",
     "description": "Learn German effectively with Hans Müller! This course focuses on essential grammar, vocabulary, and cultural aspects of the German language.",
     "image_url": "https://i.ibb.co/TkJhW6M/No-comments-6.png",
-    "title": "German Efficiency:Master the Language's Precision",
+    "title": "German Efficiency: Master the Language's Precision",
     "classes_taken": 7,
     "available_seats": 23,
-    "course_price": 45
+    "course_price": 45,
+    "course_img": "https://example.com/german-course-image.jpg"
   },
   {
     "id": 6,
@@ -76,11 +81,12 @@
     "email": "li.wei@example.com",
     "rating": 4.7,
     "enrolled_students": "80",
-    "description": "Explore the wonders of Chinese language with Li Wei! Join this course to learn Chinese characters, tones, and basic conversational skills.",
+    "description": "Explore the wonders of the Chinese language with Li Wei! Join this course to learn Chinese characters, tones, and basic conversational skills.",
     "image_url": "https://i.ibb.co/HgxtPhZ/No-comments-9.png",
     "title": "Unlocking Mandarin: Embrace the Beauty of Chinese",
     "classes_taken": 9,
     "available_seats": 21,
-    "course_price": 50
+    "course_price": 50,
+    "course_img": "https://example.com/chinese-course-image.jpg"
   }
 ]
