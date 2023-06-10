@@ -1,9 +1,15 @@
 import React from "react";
+import PageTitle from "../../Components/PageTitle";
 
 const Classes = () => {
   return (
     <div>
-      <h1 className="">This is classes</h1>
+      <PageTitle
+        heading={"Available Classes"}
+        subHeading={
+          "Tip: It's better to study about you interested subjects pros/cons before you enroll"
+        }
+      ></PageTitle>
     </div>
   );
 };

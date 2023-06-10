@@ -12,7 +12,7 @@
     "classes_taken": 10,
     "available_seats": 30,
     "course_price": 50,
-    "course_img": "https://example.com/spanish-course-image.jpg"
+    "course_img": "https://i.ibb.co/N2CVmzD/Spanish.jpg"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
     "classes_taken": 8,
     "available_seats": 42,
     "course_price": 40,
-    "course_img": "https://example.com/bangla-course-image.jpg"
+    "course_img": "https://i.ibb.co/dMnYqjj/Bangladesh.jpg"
   },
   {
     "id": 3,
@@ -42,7 +42,7 @@
     "classes_taken": 5,
     "available_seats": 45,
     "course_price": 60,
-    "course_img": "https://example.com/english-course-image.jpg"
+    "course_img": "https://i.ibb.co/9rPRr9w/london-uk.jpg"
   },
   {
     "id": 4,
@@ -57,7 +57,7 @@
     "classes_taken": 12,
     "available_seats": 18,
     "course_price": 55,
-    "course_img": "https://example.com/french-course-image.jpg"
+    "course_img": "https://i.ibb.co/VH7LZJT/paris-eifeel-tower-france.jpg"
   },
   {
     "id": 5,
@@ -72,7 +72,7 @@
     "classes_taken": 7,
     "available_seats": 23,
     "course_price": 45,
-    "course_img": "https://example.com/german-course-image.jpg"
+    "course_img": "https://i.ibb.co/0MQt3Gz/german-flag-on-urban-roof.jpg"
   },
   {
     "id": 6,
@@ -87,6 +87,6 @@
     "classes_taken": 9,
     "available_seats": 21,
     "course_price": 50,
-    "course_img": "https://example.com/chinese-course-image.jpg"
+    "course_img": "https://i.ibb.co/Tm3717b/china.jpg"
   }
 ]
