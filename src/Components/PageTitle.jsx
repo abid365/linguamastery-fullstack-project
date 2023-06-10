@@ -2,7 +2,7 @@ import React from "react";
 
 const PageTitle = ({ heading, subHeading }) => {
   return (
-    <div className="relative">
+    <div className="relative border-b border-slate-400">
       <div>
         <h1 className="text-5xl font-bold text-slate-700 pt-2 text-center mt-5">
           {heading}
