@@ -2,12 +2,12 @@ import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { Link } from "react-router-dom";
-import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { BsFillEyeFill, BsFillEyeSlashFill, BsGoogle } from "react-icons/bs";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 const LogIn = () => {
-  const { logIn, user } = useContext(AuthContext);
+  const { logIn, user, googleSignIn } = useContext(AuthContext);
   const [passVisible, setPassVisible] = useState(false);
 
   const toggler = () => {
@@ -51,6 +51,17 @@ const LogIn = () => {
             theme: "dark",
           });
         }
+      });
+  };
+
+  // google sign in
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        alert("success");
+      })
+      .catch((error) => {
+        alert("Error Occured");
       });
   };
 
@@ -132,6 +143,15 @@ const LogIn = () => {
                   />
                 </div>
               </form>
+              <div className="divider"></div>
+              <div className="flex justify-center items-center">
+                <button
+                  onClick={handleGoogleSignIn}
+                  className="btn-circle btn mb-4 btn-neutral"
+                >
+                  <BsGoogle></BsGoogle>
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 const AvailableClass = (props) => {
   console.log(props.course);
   const {
-    language,
     course_price,
     teacher,
     enrolled_students,
@@ -14,6 +13,7 @@ const AvailableClass = (props) => {
     title,
     description,
     course_img,
+    _id,
   } = props.course;
   return (
     <div>
@@ -43,7 +43,10 @@ const AvailableClass = (props) => {
                 </p>
               </div>
             </div>
-            <Link className="text-sm border border-indigo-500 px-2 pt-2 pb-1 rounded-lg hover:text-indigo-500 ml-5">
+            <Link
+              to={`/myclass/${_id}`}
+              className="text-sm border border-indigo-500 px-2 pt-2 pb-1 rounded-lg hover:text-indigo-500 ml-5"
+            >
               <BsFillArrowUpRightCircleFill className="inline-block"></BsFillArrowUpRightCircleFill>{" "}
               Get Now
             </Link>

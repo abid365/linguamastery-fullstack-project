@@ -13,10 +13,10 @@ const PopIns = () => {
   }, []);
 
   return (
-    <div className="my-20 py-20 border-t border-slate-200 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+    <div className="my-20 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
       {/* first grid item */}
       <div>
-        <div className="overflow-x-auto border-2 p-1 rounded-2xl border-slate-800 bg-slate-100 shadow-lg">
+        <div className="overflow-x-auto border-2 p-1 rounded-2xl border-slate-50 bg-slate-100 shadow-lg">
           <table className="table md:table-sm lg:table-md">
             <thead>
               <tr>

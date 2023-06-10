@@ -12,7 +12,7 @@ const Popular = () => {
 
   //   ui render
   return (
-    <div className="my-20 border-t-2 pt-10 relative">
+    <div className="my-20 border-t border-slate-200 pt-10 relative">
       <img
         className="absolute -z-10 top-44"
         src="/src/assets/Mass Circles.svg"

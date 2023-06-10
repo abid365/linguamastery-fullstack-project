@@ -8,6 +8,7 @@ import About from "../Layouts/About/About";
 import LogIn from "../Layouts/Login/LogIn";
 import SignUp from "../Layouts/SignUp/SignUp";
 import ErrorElement from "../Components/ErrorElement";
+import SelectedClass from "../Layouts/Selected Class/SelectedClass";
 
 const router = createBrowserRouter([
   {
@@ -26,10 +27,10 @@ const router = createBrowserRouter([
         path: "/classes",
         element: <Classes></Classes>,
       },
-      {
+      /*  {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-      },
+      }, */
       {
         path: "/about",
         element: <About></About>,
@@ -42,7 +43,19 @@ const router = createBrowserRouter([
         path: "/signup",
         element: <SignUp></SignUp>,
       },
+      {
+        path: "/myclass/:id",
+        element: <SelectedClass></SelectedClass>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/inst/${params.id}`),
+      },
     ],
+    errorElement: <ErrorElement></ErrorElement>,
+  },
+  {
+    path: "/dashboard",
+    element: <Dashboard></Dashboard>,
+    children: [],
     errorElement: <ErrorElement></ErrorElement>,
   },
 ]);
