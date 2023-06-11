@@ -30,9 +30,9 @@ const SelectedClass = () => {
       description,
       course_price,
       title,
-      _id,
       available_seats,
       image_url,
+      user: user.email,
     };
 
     fetch(`http://localhost:5000/myclass`, {
@@ -47,14 +47,14 @@ const SelectedClass = () => {
         if (res.ok) {
           confirm("Wanna Add This Item?");
           toast("✅ SuccessFully Added!", {
-            position: "top-center",
+            position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "light",
+            theme: "dark",
           });
         } else {
           toast.error("Failed To Add");
@@ -107,7 +107,9 @@ const SelectedClass = () => {
             {/* <Link className="text-2xl hover:text-indigo-500 ml-5">
               <BsFillArrowUpRightCircleFill></BsFillArrowUpRightCircleFill>{" "}
             </Link> */}
-            <button onClick={handleAddCourse}>add</button>
+            <button className="btn btn-neutral" onClick={handleAddCourse}>
+              add this course
+            </button>
           </div>
         </div>
       </div>
