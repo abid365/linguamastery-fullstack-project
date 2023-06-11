@@ -11,11 +11,24 @@ const MySeClasses = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setMyClasses(data));
-  }, []);
+  }, [url]);
 
   // handle delete function: delete items by id
   const handleDelete = (id) => {
     console.log("Item Id for Deletation", id);
+    const proceed = confirm("Delete this item?");
+
+    if (proceed) {
+      fetch(`http://localhost:5000/myclass/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => {
+          res.json();
+        })
+        .then((data) => {
+          console.log(data);
+        });
+    }
   };
 
   return (
