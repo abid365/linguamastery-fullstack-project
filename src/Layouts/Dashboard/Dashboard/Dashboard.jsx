@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PageTitle from "../../../Components/PageTitle";
 import { Link, Outlet } from "react-router-dom";
 import {
@@ -10,8 +10,11 @@ import {
   BsPersonCircle,
   BsStars,
 } from "react-icons/bs";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Dashboard = () => {
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="mt-10">
       <PageTitle
@@ -78,6 +81,21 @@ const Dashboard = () => {
                   <BsStars></BsStars> About
                 </Link>
               </li>
+              <div className="divider"></div>
+              <h1 className="text-center border border-slate-600 rounded-lg p-1 text-slate-700 font-semibold mb-2">
+                Interacting As:
+              </h1>
+              <div className="flex gap-2">
+                <div className="avatar online">
+                  <div className="w-12 rounded-full items-center">
+                    <img src={user?.photoURL} />
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <h1>{user?.displayName}</h1>
+                  <small>{user?.email}</small>
+                </div>
+              </div>
             </ul>
           </div>
         </div>
