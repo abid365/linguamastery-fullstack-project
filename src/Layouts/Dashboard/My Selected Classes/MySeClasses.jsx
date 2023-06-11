@@ -12,17 +12,24 @@ const MySeClasses = () => {
       .then((res) => res.json())
       .then((data) => setMyClasses(data));
   }, []);
+
+  // handle delete function: delete items by id
+  const handleDelete = (id) => {
+    console.log("Item Id for Deletation", id);
+  };
+
   return (
     <div className="h-full w-full mt-10 flex flex-col items-center">
-      <h1 className="text-center text-lg font-bold text-indigo-400 border border-slate-50 bg-slate-100 shadow-md pt-3 px-2 pb-1 rounded-lg w-fit">
+      <h1 className="text-center text-lg font-bold text-blue-600 border border-slate-50 bg-slate-100 shadow-md pt-3 px-2 pb-1 rounded-lg w-fit">
         Number of Selected Classes: {myClasses.length}
       </h1>
 
-      <div className="my-10">
+      <div className="my-5 grid grid-cols-1 lg:grid-cols-2 gap-2">
         {myClasses.map((myClass) => (
           <DashSelectedClass
             myClass={myClass}
             key={myClass._id}
+            handleDelete={handleDelete}
           ></DashSelectedClass>
         ))}
       </div>

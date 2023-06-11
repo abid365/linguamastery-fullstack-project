@@ -1,7 +1,6 @@
 import React from "react";
 
 const DashSelectedClass = (props) => {
-  console.log(props);
   const {
     available_seats,
     course_price,
@@ -9,7 +8,16 @@ const DashSelectedClass = (props) => {
     image_url,
     teacher,
     title,
+    _id,
   } = props.myClass;
+
+  /*
+    1. handle delete , the delete function seted to upper component and 
+    will be pass as props in this componet and than it will be used by destructring first. 
+
+    2. After delete The ui needs to be updated, it can be done by filtering out the deleted item. And re-render the remaining ones
+     */
+
   return (
     <div className="mt-10">
       <div className="border border-slate-300 rounded-lg bg-slate-100">
@@ -32,7 +40,10 @@ const DashSelectedClass = (props) => {
               <button className="px-2 pt-2 pb-1 border border-slate-400 rounded-md text-xs hover:bg-indigo-200 hover:shadow">
                 ${course_price} Get Now!
               </button>
-              <button className="px-2 pt-2 pb-1 border border-slate-400 rounded-md text-xs hover:bg-indigo-200 hover:shadow">
+              <button
+                onClick={() => props.handleDelete(_id)}
+                className="px-2 pt-2 pb-1 border border-slate-400 rounded-md text-xs hover:bg-indigo-200 hover:shadow"
+              >
                 Delete
               </button>
             </div>
