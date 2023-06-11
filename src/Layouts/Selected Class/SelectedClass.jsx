@@ -3,6 +3,9 @@ import { BsFillArrowUpRightCircleFill, BsPeopleFill } from "react-icons/bs";
 import { MdTipsAndUpdates } from "react-icons/md";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import PageTitle from "../../Components/PageTitle";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const SelectedClass = () => {
   const { user } = useContext(AuthContext);
@@ -16,9 +19,67 @@ const SelectedClass = () => {
     available_seats,
     image_url,
   } = data;
-  console.log(data);
+  // console.log(data);
+
+  // post data to backend
+  const handleAddCourse = (event) => {
+    event.preventDefault();
+    // console.log("Kire gadha");
+    const selected = {
+      teacher,
+      description,
+      course_price,
+      title,
+      _id,
+      available_seats,
+      image_url,
+    };
+
+    fetch(`http://localhost:5000/myclass`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+
+      body: JSON.stringify(selected),
+    })
+      .then((res) => {
+        if (res.ok) {
+          confirm("Wanna Add This Item?");
+          toast("✅ SuccessFully Added!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          toast.error("Failed To Add");
+        }
+      })
+      .catch((error) => {
+        toast.error("error occured");
+      });
+  };
+
   return (
     <div>
+      <ToastContainer
+        position="bottom-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      ></ToastContainer>
+      <PageTitle heading={"Add Your Course"}></PageTitle>
       <div className="mx-10 my-10 flex flex-col justify-center items-center gap-4">
         <div className="w-fit rounded-3xl px-5 py-4 justify-self-center shadow-lg border-2 border-slate-800 bg-slate-50">
           <div className="flex justify-between">
@@ -46,9 +107,7 @@ const SelectedClass = () => {
             {/* <Link className="text-2xl hover:text-indigo-500 ml-5">
               <BsFillArrowUpRightCircleFill></BsFillArrowUpRightCircleFill>{" "}
             </Link> */}
-            <button className="border pt-2 pb-1 px-3 border-slate-50 bg-slate-200 rounded-lg hover:font-bold shadow-md">
-              Add This Course
-            </button>
+            <button onClick={handleAddCourse}>add</button>
           </div>
         </div>
       </div>
