@@ -13,6 +13,8 @@ import MySeClasses from "../Layouts/Dashboard/My Selected Classes/MySeClasses";
 import EnrolledClasses from "../Layouts/Dashboard/Enrolled/EnrolledClasses";
 import PaymentHis from "../Layouts/Dashboard/Payment History/PaymentHis";
 import PrivateRouter from "./PrivateRouter";
+import ManageClass from "../Layouts/Dashboard/ManageClassAdmin/ManageClass";
+import ManageUsers from "../Layouts/Dashboard/ManageUsersAdmin/ManageUsers";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +79,14 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/history",
         element: <PaymentHis></PaymentHis>,
+      },
+      {
+        path: "/dashboard/manage_classes",
+        element: <ManageClass></ManageClass>,
+      },
+      {
+        path: "/dashboard/manage_users",
+        element: <ManageUsers></ManageUsers>,
       },
     ],
     errorElement: <ErrorElement></ErrorElement>,

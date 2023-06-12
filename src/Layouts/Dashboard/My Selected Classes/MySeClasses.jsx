@@ -27,7 +27,7 @@ const MySeClasses = () => {
         .then((res) => {
           if (res.ok) {
             toast("🚮 Items Deleted!", {
-              position: "top-center",
+              position: "bottom-center",
               autoClose: 3000,
               hideProgressBar: false,
               closeOnClick: true,

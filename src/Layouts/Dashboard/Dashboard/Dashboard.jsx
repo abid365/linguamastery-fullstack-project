@@ -6,6 +6,7 @@ import {
   BsFillBookmarkCheckFill,
   BsFillCollectionPlayFill,
   BsFillHeartFill,
+  BsFillPeopleFill,
   BsHouseFill,
   BsPersonCircle,
   BsStars,
@@ -14,6 +15,8 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
+
+  const isAdmin = true;
 
   return (
     <div className="mt-10">
@@ -39,24 +42,49 @@ const Dashboard = () => {
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
-              <li>
-                <Link to="/dashboard/selectedClasses">
-                  <BsFillBookmarkCheckFill className="inline-block" />
-                  My Selected Classes
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard/enrolledClasses">
-                  <BsFillHeartFill className="inline-block"></BsFillHeartFill>{" "}
-                  My Enrolled Classes
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard/history">
-                  <BsCreditCardFill className="inline-block mb-2"></BsCreditCardFill>{" "}
-                  Payment History
-                </Link>
-              </li>
+              {isAdmin ? (
+                <>
+                  <li>
+                    <Link to="/dashboard/manage_classes">
+                      <BsFillBookmarkCheckFill className="inline-block" />
+                      Manage Classes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/dashboard/manage_users">
+                      <BsFillPeopleFill className="inline-block"></BsFillPeopleFill>
+                      Manage Users
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/dashboard/history">
+                      <BsCreditCardFill className="inline-block mb-2"></BsCreditCardFill>{" "}
+                      Payment History
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/dashboard/selectedClasses">
+                      <BsFillBookmarkCheckFill className="inline-block" />
+                      My Selected Classes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/dashboard/enrolledClasses">
+                      <BsFillHeartFill className="inline-block"></BsFillHeartFill>{" "}
+                      My Enrolled Classes
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/dashboard/history">
+                      <BsCreditCardFill className="inline-block mb-2"></BsCreditCardFill>{" "}
+                      Payment History
+                    </Link>
+                  </li>
+                </>
+              )}
               <div className="divider"></div>
               <li>
                 <Link to="/">
