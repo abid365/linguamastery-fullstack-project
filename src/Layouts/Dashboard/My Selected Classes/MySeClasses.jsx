@@ -28,7 +28,7 @@ const MySeClasses = () => {
           if (res.ok) {
             toast("🚮 Items Deleted!", {
               position: "top-center",
-              autoClose: 5000,
+              autoClose: 3000,
               hideProgressBar: false,
               closeOnClick: true,
               pauseOnHover: true,
@@ -50,7 +50,7 @@ const MySeClasses = () => {
     <div className="h-full w-full mt-10 flex flex-col items-center">
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

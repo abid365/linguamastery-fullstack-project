@@ -34,7 +34,7 @@ const LogIn = () => {
         if (res) {
           toast("❤️️ Successfully Loggedin", {
             position: "bottom-center",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -49,7 +49,7 @@ const LogIn = () => {
         if (error) {
           toast("💔 Something Went Wrong", {
             position: "bottom-center",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -89,7 +89,7 @@ const LogIn = () => {
               reset();
               toast("❤️️ Logged in Successfully", {
                 position: "bottom-center",
-                autoClose: 5000,
+                autoClose: 3000,
                 hideProgressBar: false,
                 closeOnClick: true,
                 pauseOnHover: true,
@@ -105,7 +105,7 @@ const LogIn = () => {
         if (error) {
           toast("💔 Something Went Wrong", {
             position: "bottom-center",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -121,7 +121,7 @@ const LogIn = () => {
     <div>
       <ToastContainer
         position="bottom-center"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop
         closeOnClick
