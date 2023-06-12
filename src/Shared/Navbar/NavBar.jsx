@@ -55,7 +55,9 @@ const NavBar = () => {
       />
       <div className="navbar mb-5 px-5 flex items-center justify-between">
         <div className="font-bold text-2xl">
-          <p className="text-indigo-500">LinguaMastery</p>
+          <Link to="/" className="text-indigo-500">
+            LinguaMastery
+          </Link>
         </div>
         <div className="flex gap-5 font-bold">
           <Link to="/" className="text-slate-500 hover:text-slate-700">

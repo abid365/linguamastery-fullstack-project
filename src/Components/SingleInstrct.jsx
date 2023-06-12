@@ -4,7 +4,7 @@ import { BsFillPeopleFill } from "react-icons/bs";
 const SingleInstrct = (props) => {
   const { image_url, teacher, rating, classes_taken, language, email } =
     props.teacher;
-  console.log(props);
+  // console.log(props);
   return (
     <tbody>
       {/* row 1 */}

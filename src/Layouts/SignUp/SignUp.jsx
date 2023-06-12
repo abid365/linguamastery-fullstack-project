@@ -1,16 +1,20 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { BsFillEyeFill, BsFillEyeSlashFill, BsGoogle } from "react-icons/bs";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const { signUp, updateUserProfile } = useContext(AuthContext);
   const [passVisible, setPassVisible] = useState(false);
+  const { googleSignIn } = useContext(AuthContext);
   // const [matchPass, setMatchPass] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const toggler = () => {
     setPassVisible(!passVisible);
@@ -85,9 +89,40 @@ const SignUp = () => {
   const password = watch("password");
   const confirmPassword = watch("confirmPassword");
   const matchPassword = password === confirmPassword;
-  // if (password === confirmPassword) {
-  //   setMatchPass(true);
-  // }
+
+  // handle google
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        if (res) {
+          toast("❤️️ Successfully Loggedin", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          navigate(from, { replace: true });
+        }
+      })
+      .catch((error) => {
+        if (error) {
+          toast("💔 Something Went Wrong", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      });
+  };
 
   return (
     <div>
@@ -105,7 +140,7 @@ const SignUp = () => {
       />
       <div className="hero min-h-screen">
         <div>
-          <div className="card border-2 border-slate-800 flex-shrink-0 w-full max-w-sm shadow-xl bg-base-100">
+          <div className="card border-2 border-slate-800 flex-shrink-0 w-full max-w-lg shadow-xl bg-base-100">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -269,6 +304,15 @@ const SignUp = () => {
                 />
               </div>
             </form>
+            <div className="divider"></div>
+            <div className="flex justify-center items-center">
+              <button
+                onClick={handleGoogleSignIn}
+                className="btn-circle btn mb-4 btn-neutral"
+              >
+                <BsGoogle></BsGoogle>
+              </button>
+            </div>
           </div>
         </div>
       </div>

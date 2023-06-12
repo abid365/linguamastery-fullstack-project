@@ -1,13 +1,18 @@
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BsFillEyeFill, BsFillEyeSlashFill, BsGoogle } from "react-icons/bs";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 
 const LogIn = () => {
   const { logIn, user, googleSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
   const [passVisible, setPassVisible] = useState(false);
 
   const toggler = () => {
@@ -25,6 +30,7 @@ const LogIn = () => {
     console.log(data);
     logIn(data.email, data.password)
       .then((res) => {
+        reset();
         if (res) {
           toast("❤️️ Successfully Loggedin", {
             position: "bottom-center",
@@ -36,6 +42,7 @@ const LogIn = () => {
             progress: undefined,
             theme: "dark",
           });
+          navigate(from, { replace: true });
         }
       })
       .catch((error) => {
@@ -58,17 +65,40 @@ const LogIn = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((res) => {
-        if (res) {
-          toast("❤️️ Successfully Loggedin", {
-            position: "bottom-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            theme: "dark",
-          });
+        const loggedUser = res.user;
+        // console.log(loggedUser.displayName);
+
+        const saveUser = {
+          name: loggedUser.displayName,
+          email: loggedUser.email,
+        };
+
+        if (loggedUser) {
+          fetch(`https://assignment-12-server-green.vercel.app/users`, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(saveUser),
+          })
+            .then((res) => {
+              res.json();
+            })
+            .then((data) => {
+              console.log(data);
+              reset();
+              toast("❤️️ Logged in Successfully", {
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+              });
+              navigate("/");
+            });
         }
       })
       .catch((error) => {

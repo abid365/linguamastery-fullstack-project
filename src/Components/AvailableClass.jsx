@@ -4,7 +4,7 @@ import { MdTipsAndUpdates } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const AvailableClass = (props) => {
-  console.log(props.course);
+  // console.log(props.course);
   const {
     course_price,
     teacher,
