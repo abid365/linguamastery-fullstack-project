@@ -12,6 +12,7 @@ import SelectedClass from "../Layouts/Selected Class/SelectedClass";
 import MySeClasses from "../Layouts/Dashboard/My Selected Classes/MySeClasses";
 import EnrolledClasses from "../Layouts/Dashboard/Enrolled/EnrolledClasses";
 import PaymentHis from "../Layouts/Dashboard/Payment History/PaymentHis";
+import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +60,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRouter>
+        <Dashboard></Dashboard>
+      </PrivateRouter>
+    ),
     children: [
       {
         path: "/dashboard/selectedClasses",

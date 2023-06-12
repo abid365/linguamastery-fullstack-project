@@ -26,7 +26,7 @@ const LogIn = () => {
     logIn(data.email, data.password)
       .then((res) => {
         if (res) {
-          toast("❤️️ You Successfully Loggedin", {
+          toast("❤️️ Successfully Loggedin", {
             position: "bottom-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -58,10 +58,32 @@ const LogIn = () => {
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then((res) => {
-        alert("success");
+        if (res) {
+          toast("❤️️ Successfully Loggedin", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
       })
       .catch((error) => {
-        alert("Error Occured");
+        if (error) {
+          toast("💔 Something Went Wrong", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
       });
   };
 

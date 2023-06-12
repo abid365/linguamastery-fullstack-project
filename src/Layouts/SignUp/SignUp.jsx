@@ -10,7 +10,7 @@ const SignUp = () => {
   const { signUp, updateUserProfile } = useContext(AuthContext);
   const [passVisible, setPassVisible] = useState(false);
   // const [matchPass, setMatchPass] = useState(false);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const toggler = () => {
     setPassVisible(!passVisible);
@@ -29,22 +29,37 @@ const SignUp = () => {
       .then((res) => {
         updateUserProfile(data.name, data.photoURL)
           .then(() => {
-            console.log("User Updated With Photo and name");
             const signedUser = res.user;
             // console.log(signedUser);
+            const saveUser = { name: data.name, email: data.email };
+
             if (signedUser) {
-              toast("❤️️ Account Created Successfully", {
-                position: "bottom-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-              });
-              reset();
-              // navigate("/");
+              // posting data to user collection
+              fetch(`https://assignment-12-server-green.vercel.app/users`, {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(saveUser),
+              })
+                .then((res) => {
+                  res.json();
+                })
+                .then((data) => {
+                  console.log(data);
+                  reset();
+                  toast("❤️️ Account Created Successfully", {
+                    position: "bottom-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                  });
+                  navigate("/");
+                });
             }
           })
           .catch((error) => {

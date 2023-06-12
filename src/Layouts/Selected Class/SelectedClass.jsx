@@ -32,7 +32,7 @@ const SelectedClass = () => {
       title,
       available_seats,
       image_url,
-      user: user.email,
+      user: user?.email,
     };
 
     fetch(`https://assignment-12-server-green.vercel.app/myclass`, {
@@ -107,7 +107,10 @@ const SelectedClass = () => {
             {/* <Link className="text-2xl hover:text-indigo-500 ml-5">
               <BsFillArrowUpRightCircleFill></BsFillArrowUpRightCircleFill>{" "}
             </Link> */}
-            <button className="btn btn-neutral" onClick={handleAddCourse}>
+            <button
+              className="pt-2 pb-1 px-3 rounded-lg border border-slate-700 hover:bg-slate-100 capitalize font-bold"
+              onClick={handleAddCourse}
+            >
               add this course
             </button>
           </div>
