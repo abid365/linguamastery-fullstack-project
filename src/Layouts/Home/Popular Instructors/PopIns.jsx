@@ -7,7 +7,7 @@ const PopIns = () => {
   const [popIns, setPopIns] = useState([]);
 
   useEffect(() => {
-    fetch(`popularclass.json`)
+    fetch(`https://assignment-12-server-green.vercel.app/inst`)
       .then((res) => res.json())
       .then((data) => setPopIns(data));
   }, []);

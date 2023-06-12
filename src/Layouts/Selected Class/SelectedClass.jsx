@@ -35,7 +35,7 @@ const SelectedClass = () => {
       user: user.email,
     };
 
-    fetch(`http://localhost:5000/myclass`, {
+    fetch(`https://assignment-12-server-green.vercel.app/myclass`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

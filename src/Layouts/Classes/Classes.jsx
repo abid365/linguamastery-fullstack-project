@@ -6,7 +6,7 @@ import AvailableClass from "../../Components/AvailableClass";
 const Classes = () => {
   const [activeCourses, setActiveCourses] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:5000/inst`)
+    fetch(`https://assignment-12-server-green.vercel.app/inst`)
       .then((res) => res.json())
       .then((data) => setActiveCourses(data));
   }, []);

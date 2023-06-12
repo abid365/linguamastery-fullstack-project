@@ -50,7 +50,9 @@ const router = createBrowserRouter([
         path: "/myclass/:id",
         element: <SelectedClass></SelectedClass>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/inst/${params.id}`),
+          fetch(
+            `https://assignment-12-server-green.vercel.app/inst/${params.id}`
+          ),
       },
     ],
     errorElement: <ErrorElement></ErrorElement>,

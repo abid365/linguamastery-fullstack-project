@@ -154,7 +154,12 @@ const SignUp = () => {
                     placeholder="password"
                     // name="password"
                     className="input input-bordered"
-                    {...register("password", { required: true, minLength: 6 })}
+                    {...register("password", {
+                      required: true,
+                      minLength: 6,
+                      pattern:
+                        /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/,
+                    })}
                   />
 
                   <button
@@ -176,6 +181,11 @@ const SignUp = () => {
                 {errors.password?.type === "required" && (
                   <p className="text-sm pt-2 text-red-400 mt-1">
                     Password is required
+                  </p>
+                )}
+                {errors.password?.type === "pattern" && (
+                  <p className="text-sm pt-2 text-red-400 mt-1">
+                    uppercase, number and special character required
                   </p>
                 )}
               </div>
