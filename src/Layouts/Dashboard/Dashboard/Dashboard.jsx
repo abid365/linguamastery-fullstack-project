@@ -16,7 +16,7 @@ import { AuthContext } from "../../../Providers/AuthProvider";
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
 
-  const isAdmin = true;
+  const isAdmin = false;
 
   return (
     <div className="mt-10">

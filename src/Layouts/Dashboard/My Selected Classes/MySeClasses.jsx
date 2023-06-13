@@ -60,16 +60,12 @@ const MySeClasses = () => {
         pauseOnHover
         theme="dark"
       />
-      {myClasses.length ? (
+      {myClasses ? (
         <h1 className="text-center text-lg font-bold text-blue-600 border border-slate-50 bg-slate-100 shadow-md pt-3 px-2 pb-1 rounded-lg w-fit">
           Number of Selected Classes: {myClasses.length}
         </h1>
       ) : (
-        <div>
-          <h1>No classes Found</h1>
-          <div className="divider text-xs">or</div>
-          <p className="text-xs text-center">Refresh The Page</p>
-        </div>
+        <div>Number of Selected Classes: {myClasses.length}</div>
       )}
 
       <div className="my-5 grid grid-cols-1 lg:grid-cols-2 gap-2">

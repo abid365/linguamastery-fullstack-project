@@ -17,7 +17,7 @@ const SignUp = () => {
   const from = location.state?.from?.pathname || "/";
 
   const toggler = () => {
-    setPassVisible(!passVisible);
+    setPassVisible(passVisible ? false : true);
   };
 
   const {
