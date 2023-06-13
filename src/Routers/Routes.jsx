@@ -51,7 +51,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/myclass/:id",
-        element: <SelectedClass></SelectedClass>,
+        element: (
+          <PrivateRouter>
+            <SelectedClass></SelectedClass>
+          </PrivateRouter>
+        ),
         loader: ({ params }) =>
           fetch(
             `https://assignment-12-server-green.vercel.app/inst/${params.id}`

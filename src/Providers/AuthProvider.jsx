@@ -56,7 +56,7 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log("Current User: ", currentUser);
-
+      setLoading(false);
       // get and set token
       if (currentUser) {
         axios
