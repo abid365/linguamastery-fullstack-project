@@ -40,9 +40,9 @@ const PopInsTable = (props) => {
               </span> */}
         </td>
         <td className="text-slate-800">{language} Instructor</td>
-        <td>
+        {/*  <td>
           <button className="btn btn-ghost btn-xs">details</button>
-        </td>
+        </td> */}
       </tr>
       {/* row 2 */}
     </tbody>

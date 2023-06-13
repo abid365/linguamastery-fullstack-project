@@ -41,7 +41,7 @@ const ManageUsers = () => {
 
   // handle instructor
   const makeinstructor = (id) => {
-    // console.log(id);
+    //todo: prevent deleting deleting user when he is admin
     fetch(
       `https://assignment-12-server-green.vercel.app/users/instructor/${id}`,
       {
@@ -64,6 +64,33 @@ const ManageUsers = () => {
           });
           refetch();
         }
+      });
+  };
+
+  // handle delete
+  const handleDelete = (id) => {
+    console.log(id);
+    fetch(`https://assignment-12-server-green.vercel.app/users/${id}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        console.log(res);
+        if (res.ok) {
+          toast(`💣 User Deleted`, {
+            position: "bottom-center",
+            autoClose: 1500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          refetch();
+        }
+      })
+      .catch((err) => {
+        console.log(err);
       });
   };
 
@@ -146,7 +173,10 @@ const ManageUsers = () => {
                   )}
                 </td>
                 <td>
-                  <button className="px-2 pt-2 pb-2 rounded-md bg-red-300 hover:bg-red-400 hover:shadow-md">
+                  <button
+                    onClick={() => handleDelete(user?._id)}
+                    className="px-2 pt-2 pb-2 rounded-md bg-red-300 hover:bg-red-400 hover:shadow-md"
+                  >
                     <FaTrash></FaTrash>
                   </button>
                 </td>

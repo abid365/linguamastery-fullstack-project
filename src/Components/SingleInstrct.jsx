@@ -39,9 +39,9 @@ const SingleInstrct = (props) => {
         </td>
         <td className="text-slate-800">{language} Instructor</td>
         <td>
-          <button className="btn btn-outline lg:btn-md btn-xs">
+          {/*  <button className="btn btn-outline lg:btn-md btn-xs">
             See Classes
-          </button>
+          </button> */}
         </td>
       </tr>
       {/* row 2 */}

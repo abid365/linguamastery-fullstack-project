@@ -25,7 +25,7 @@ const Instructors = () => {
               <th>Email</th>
               <th>Classes Taken</th>
               <th>Role</th>
-              <th>Details</th>
+              {/* <th>Details</th> */}
             </tr>
           </thead>
           {teachers.map(
