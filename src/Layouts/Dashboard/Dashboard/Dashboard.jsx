@@ -12,11 +12,14 @@ import {
   BsStars,
 } from "react-icons/bs";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Dashboard = () => {
   const { user } = useContext(AuthContext);
 
-  const isAdmin = true;
+  // const isAdmin = true;
+
+  const [isAdmin] = useAdmin();
 
   return (
     <div className="mt-10">
