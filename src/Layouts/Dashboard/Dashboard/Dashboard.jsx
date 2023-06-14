@@ -132,7 +132,8 @@ const Dashboard = () => {
               </li>
               <div className="divider"></div>
               <h1 className="text-center border border-slate-600 rounded-lg p-1 text-slate-700 font-semibold mb-2">
-                Interacting As:
+                Interacting As:{" "}
+                {isAdmin ? "Admin" : isInstructor ? "Instructor" : "User"}
               </h1>
               <div className="flex gap-2">
                 <div className="avatar online">

@@ -11,17 +11,29 @@ const SingleInstrct = (props) => {
       <tr>
         <td>
           <div className="flex items-center space-x-3">
-            <div className="avatar">
-              <div className="mask mask-squircle w-12 h-12">
-                <img src={image_url} alt="Avatar Tailwind CSS Component" />
+            {image_url ? (
+              <div className="avatar">
+                <div className="mask mask-squircle w-12 h-12">
+                  <img src={image_url} alt="Avatar Tailwind CSS Component" />
+                </div>
               </div>
-            </div>
+            ) : (
+              <div className="avatar placeholder">
+                <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+                  <span className="text-xl pt-1">{teacher[0]}</span>
+                </div>
+              </div>
+            )}
             <div>
               <div className="font-bold text-slate-500">{teacher}</div>
               <div className="text-sm opacity-50">
-                <div className="badge badge-neutral pt-1 text-white">
-                  {rating}
-                </div>
+                {rating ? (
+                  <div className="badge badge-neutral pt-1 text-white">
+                    {rating}
+                  </div>
+                ) : (
+                  <div className="badge badge-neutral pt-1 text-white">---</div>
+                )}
               </div>
             </div>
           </div>
@@ -33,9 +45,17 @@ const SingleInstrct = (props) => {
           </span> */}
         </td>
         <td>
-          {" "}
-          <BsFillPeopleFill className="inline-block text-slate-500"></BsFillPeopleFill>{" "}
-          {classes_taken}
+          {classes_taken ? (
+            <span>
+              <BsFillPeopleFill className="inline-block text-slate-500"></BsFillPeopleFill>{" "}
+              {classes_taken}
+            </span>
+          ) : (
+            <span>
+              <BsFillPeopleFill className="inline-block text-slate-500"></BsFillPeopleFill>{" "}
+              Not Yet
+            </span>
+          )}
         </td>
         <td className="text-slate-800">{language} Instructor</td>
         <td>
