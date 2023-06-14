@@ -20,8 +20,8 @@ const DashSelectedClass = (props) => {
      */
 
   //todo: handle payment , and show classes in my enrolled classes
-  const handlePayment = (id) => {
-    console.log(id);
+  const handlePayment = (price) => {
+    console.log(price);
   };
 
   return (
@@ -51,9 +51,9 @@ const DashSelectedClass = (props) => {
               Available Seats: {available_seats}
             </small>
             <div className="card-actions">
-              <Link to={`/dashboard/payment/${_id}`}>
+              <Link to={`/dashboard/payment/${course_price}`}>
                 <button
-                  onClick={() => handlePayment(_id)}
+                  onClick={() => handlePayment(course_price)}
                   className="px-2 pt-2 pb-1 border border-slate-400 rounded-md text-xs hover:bg-indigo-200 hover:shadow"
                 >
                   ${course_price} Get Now!
