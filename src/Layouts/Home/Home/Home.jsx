@@ -11,7 +11,7 @@ const Home = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* 1st column */}
         <div>
-          <h1 className="text-8xl font-extrabold font-sans">
+          <h1 className="lg:text-8xl text-6xl font-extrabold font-sans">
             Best Online<br></br> Language{" "}
             <span className="text-indigo-500">Courses</span>
             <img

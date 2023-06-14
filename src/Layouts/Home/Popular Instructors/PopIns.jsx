@@ -29,7 +29,7 @@ const PopIns = () => {
             {popIns.map((instructor) => (
               <PopInsTable
                 instructor={instructor}
-                key={instructor.id}
+                key={instructor._id}
               ></PopInsTable>
             ))}
           </table>
