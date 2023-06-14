@@ -23,17 +23,39 @@ const AvailableClass = (props) => {
             <h1 className="text-lg font-bold w-4/5 text-slate-800">{title}</h1>
             <div className="badge badge-neutral pt-2">$ {course_price}</div>
           </div>
-          <p className="my-5 text-xs border-l-2 px-2">
-            <MdTipsAndUpdates className="text-lg text-indigo-400 inline-block mb-2 mr-1 animate-pulse"></MdTipsAndUpdates>
-            {description}
-          </p>
+          {description ? (
+            <p className="my-5 text-xs border-l-2 px-2">
+              <MdTipsAndUpdates className="text-lg text-indigo-400 inline-block mb-2 mr-1 animate-pulse"></MdTipsAndUpdates>
+              {description}
+            </p>
+          ) : (
+            <p className="my-5 text-xs border-l-2 px-2">
+              <MdTipsAndUpdates className="text-lg text-indigo-400 inline-block mb-2 mr-1 animate-pulse"></MdTipsAndUpdates>
+              Learning a new language is an incredibly enriching experience. It
+              allows us to connect with people from different cultures,
+              broadening our horizons and fostering cross-cultural understanding
+            </p>
+          )}
           {/* avatar and name */}
           <div className="flex items-center justify-between my-4">
             <div className="flex gap-2 items-center">
               <div className="avatar">
-                <div className="w-8 rounded-full ring">
-                  <img src={image_url} />
-                </div>
+                {image_url ? (
+                  <div className="avatar">
+                    <div className="w-8 rounded-full">
+                      <img
+                        src={image_url}
+                        alt="Avatar Tailwind CSS Component"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="avatar placeholder">
+                    <div className="bg-neutral-focus text-neutral-content rounded-full w-8">
+                      <span className="text-lg pt-2">{teacher[0]}</span>
+                    </div>
+                  </div>
+                )}
               </div>
               <div>
                 <h1 className="font-semibold text-xs">{teacher}</h1>

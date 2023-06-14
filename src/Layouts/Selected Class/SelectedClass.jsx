@@ -86,16 +86,35 @@ const SelectedClass = () => {
             <h1 className="text-lg font-bold w-4/5 text-slate-800">{title}</h1>
             <div className="badge badge-neutral pt-2">${course_price}</div>
           </div>
-          <p className="my-5 text-lg border-l-2 px-2">
-            <MdTipsAndUpdates className="text-lg text-indigo-400 inline-block mb-2 mr-1 animate-pulse"></MdTipsAndUpdates>
-            {description}
-          </p>
+          {description ? (
+            <p className="my-5 w-3/4 text-xs border-l-2 px-2">
+              <MdTipsAndUpdates className="text-lg text-indigo-400 inline-block mb-2 mr-1 animate-pulse"></MdTipsAndUpdates>
+              {description}
+            </p>
+          ) : (
+            <p className="my-5 w-3/4 text-xs border-l-2 px-2">
+              <MdTipsAndUpdates className="text-lg text-indigo-400 inline-block mb-2 mr-1 animate-pulse"></MdTipsAndUpdates>
+              Learning a new language is an incredibly enriching experience. It
+              allows us to connect with people from different cultures,
+              broadening our horizons and fostering cross-cultural understanding
+            </p>
+          )}
           {/* avatar and name */}
           <div className="flex items-center gap-3 my-2">
             <div className="avatar">
-              <div className="w-12 rounded-full ring">
-                <img src={image_url} />
-              </div>
+              {image_url ? (
+                <div className="avatar">
+                  <div className="mask mask-squircle w-12 h-12">
+                    <img src={image_url} alt="Avatar Tailwind CSS Component" />
+                  </div>
+                </div>
+              ) : (
+                <div className="avatar placeholder">
+                  <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+                    <span className="text-xl pt-1">{teacher[0]}</span>
+                  </div>
+                </div>
+              )}
             </div>
             <div>
               <h1 className="font-semibold text-base">{teacher}</h1>

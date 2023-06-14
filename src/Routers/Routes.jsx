@@ -17,6 +17,8 @@ import ManageClass from "../Layouts/Dashboard/ManageClassAdmin/ManageClass";
 import ManageUsers from "../Layouts/Dashboard/ManageUsersAdmin/ManageUsers";
 import Addaclass from "../Layouts/Dashboard/AddAClass/Addaclass";
 import ClassbyInstructor from "../Layouts/Dashboard/ClassbyInstructor/ClassbyInstructor";
+import AdminRoute from "./AdminRoute";
+import Payment from "../Layouts/Dashboard/Payment/Payment";
 
 const router = createBrowserRouter([
   {
@@ -87,12 +89,24 @@ const router = createBrowserRouter([
         element: <PaymentHis></PaymentHis>,
       },
       {
+        path: "/dashboard/payment/:id",
+        element: <Payment></Payment>,
+      },
+      {
         path: "/dashboard/manage_classes",
-        element: <ManageClass></ManageClass>,
+        element: (
+          <AdminRoute>
+            <ManageClass></ManageClass>
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/manage_users",
-        element: <ManageUsers></ManageUsers>,
+        element: (
+          <AdminRoute>
+            <ManageUsers></ManageUsers>
+          </AdminRoute>
+        ),
       },
       {
         path: "/dashboard/add_a_class",
