@@ -20,7 +20,7 @@ const Dashboard = () => {
 
   // const isAdmin = true;
 
-  // const [isAdmin] = useAdmin();
+  const [isAdmin] = useAdmin();
   const [isInstructor] = useInstructor();
 
   return (
@@ -47,7 +47,8 @@ const Dashboard = () => {
             <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
             <ul className="menu p-4 w-60 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
-              {/*               {isAdmin ? (
+
+              {isAdmin ? (
                 <>
                   <li>
                     <Link to="/dashboard/manage_classes">
@@ -68,30 +69,7 @@ const Dashboard = () => {
                     </Link>
                   </li>
                 </>
-              ) : (
-                <>
-                  <li>
-                    <Link to="/dashboard/selectedClasses">
-                      <BsFillBookmarkCheckFill className="inline-block" />
-                      My Selected Classes
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/dashboard/enrolledClasses">
-                      <BsFillHeartFill className="inline-block"></BsFillHeartFill>{" "}
-                      My Enrolled Classes
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/dashboard/history">
-                      <BsCreditCardFill className="inline-block mb-2"></BsCreditCardFill>{" "}
-                      Payment History
-                    </Link>
-                  </li>
-                </>
-              )} */}
-
-              {isInstructor ? (
+              ) : isInstructor ? (
                 <>
                   <li>
                     <Link to="/dashboard/add_a_class">
