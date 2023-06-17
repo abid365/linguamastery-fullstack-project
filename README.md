@@ -1,6 +1,4 @@
-# b712-summer-camp-client-side-abid365
 
-b712-summer-camp-client-side-abid365 created by GitHub Classroom
 
 # LinguaMastery
 
