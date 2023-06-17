@@ -28,4 +28,4 @@ A brief description of what this project does and who it's for
 - JWT
 - React Stripe
 
-## Live Site : https://b7a12-ec06e.web.app/
+
