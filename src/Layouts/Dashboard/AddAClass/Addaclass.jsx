@@ -38,7 +38,7 @@ const Addaclass = () => {
     <div className="h-full w-full mt-10">
       <div className="card-body">
         <form
-          className="grid grid-cols-2 gap-2"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-2"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="form-control">
