@@ -81,7 +81,9 @@ const NavBar = () => {
           <Link to="/dashboard" className="text-slate-500 hover:text-slate-700">
             Dashboard
           </Link>
-          {/* <Link className="text-slate-500 hover:text-slate-700">About</Link> */}
+          <Link to="/about" className="text-slate-500 hover:text-slate-700">
+            About
+          </Link>
         </div>
         <div>
           {user ? (
