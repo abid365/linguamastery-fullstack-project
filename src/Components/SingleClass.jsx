@@ -17,7 +17,7 @@ const SingleClass = (props) => {
 
   return (
     <div>
-      <div className="w-72 rounded-3xl px-5 py-4 justify-self-center shadow-lg border-2 border-slate-800 bg-slate-50">
+      <div className="lg:w-72 w-fit rounded-3xl px-5 py-4 justify-self-center shadow-lg border-2 border-slate-800 bg-slate-50">
         <div className="flex justify-between">
           <h1 className="text-lg font-bold w-4/5 text-slate-800">{title}</h1>
           {rating ? (
