@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
 
 const Addaclass = () => {
   const { user } = useContext(AuthContext);
@@ -27,6 +29,16 @@ const Addaclass = () => {
       })
         .then((res) => {
           console.log("Data Passed");
+          toast("🦄 Classes Added!", {
+            position: "bottom-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         })
         .catch((err) => {
           console.log("err occured");
@@ -36,6 +48,20 @@ const Addaclass = () => {
 
   return (
     <div className="h-full w-full mt-10">
+      <ToastContainer
+        position="botom-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      {/* Same as */}
+      <ToastContainer />
       <div className="card-body">
         <form
           className="grid grid-cols-1 lg:grid-cols-2 gap-2"
