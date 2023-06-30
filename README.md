@@ -26,4 +26,4 @@ A brief description of what this project does and who it's for
 - JWT
 - React Stripe
 
-
+Backend Repo: https://github.com/abid365/linguaMastery-serverSide
