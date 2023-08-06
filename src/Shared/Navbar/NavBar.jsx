@@ -96,7 +96,7 @@ const NavBar = () => {
           ) : (
             <Link
               to="/login"
-              className=" pt-2 pb-1 px-3 font-bold border border-slate-700 rounded-2xl bg-white opacity-70 hover:bg-black hover:text-white hover:shadow-md"
+              className=" pt-2 pb-1 px-3 font-bold border border-slate-700 rounded-lg bg-white opacity-70 hover:bg-black hover:text-white hover:shadow-md"
             >
               Log in
             </Link>
@@ -116,7 +116,7 @@ const NavBar = () => {
               Menu
             </button>
             {menuOpen && (
-              <ul className="absolute dropdown-content border-2 border-slate-800 menu p-2 right-4 mt-3 shadow bg-base-100 rounded-box w-40 text-center px-6">
+              <ul className="absolute dropdown-content border-2 border-slate-800 menu p-2 right-4 mt-3 shadow bg-white rounded-box w-40 text-center px-6">
                 <li className="my-1">
                   <Link to="/">Home</Link>
                 </li>

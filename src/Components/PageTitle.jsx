@@ -1,4 +1,5 @@
 import React from "react";
+import bgImage from "../assets/Animated Shape.svg";
 
 const PageTitle = ({ heading, subHeading }) => {
   return (
@@ -11,7 +12,7 @@ const PageTitle = ({ heading, subHeading }) => {
       </div>
       <img
         className="absolute -z-10 bottom-0"
-        src="/src/assets/Animated Shape.svg"
+        src="/Animated Shape.svg"
         alt=""
       />
     </div>

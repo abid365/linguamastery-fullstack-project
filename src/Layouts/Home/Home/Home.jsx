@@ -4,6 +4,7 @@ import TopSlider from "../TopSlider/TopSlider";
 import Popular from "../Popular Class/Popular";
 import PopIns from "../Popular Instructors/PopIns";
 import WhoWeAre from "../WhoWeAre/WhoWeAre";
+import Promo from "../../../Components/Promo";
 
 const Home = () => {
   return (
@@ -43,6 +44,7 @@ const Home = () => {
       <TopSlider></TopSlider>
       <Popular></Popular>
       <PopIns></PopIns>
+      <Promo></Promo>
       <WhoWeAre></WhoWeAre>
     </div>
   );
