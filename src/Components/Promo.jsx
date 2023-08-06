@@ -1,22 +1,17 @@
-import { LottiePlayer, useLottie } from "lottie-react";
 import React from "react";
-import webdata from "../../public/05- Web Design Data.json";
 
 const Promo = () => {
-  const commonStyles = "";
-  const options = {
-    animationData: webdata,
-    loop: true,
-  };
-  const { view } = useLottie(options);
   return (
-    <div className="my-40 mx-auto">
+    <div className="my-40">
       {/* 1st section of promo */}
-      <div className="my-28 grid sm:grid-cols-2 justify-between">
+      <div className="my-28 grid lg:grid-cols-2 grid-cols-1 justify-between items-center ">
         {/* 1st col */}
         <div>
-          <h1 className="text-4xl font-bold">free.fun.effective</h1>
-          <p className="">
+          <h1 className="text-5xl tracking-wider font-bold my-3 text-[#fe8c40] ps-3">
+            <span className="hidden lg:block">free.fun.effective</span>
+            <span className="block lg:hidden">free fun effective</span>
+          </h1>
+          <p className="text-sm text-slate-500 w-3/4">
             Learning with Lingua Mastery is fun, and{" "}
             <span className="font-bold text-indigo-500">
               research shows that it works!
@@ -26,7 +21,51 @@ const Promo = () => {
           </p>
         </div>
         {/* 2nd col */}
-        <div>{view}</div>
+        <div>
+          <img
+            src="https://i.ibb.co/BVrP61c/WFH-be-like.gif"
+            alt="image of girl"
+          />
+        </div>
+      </div>
+      {/* 2nd section of promo */}
+      <div className="my-28 grid lg:grid-cols-2 grid-cols-1 justify-between items-center ">
+        {/* 1st col */}
+        <div className="sm:order-last lg:order-first">
+          <h1 className="text-5xl tracking-wider font-bold my-3 ps-3 text-[#68d9ae]">
+            backed by science
+          </h1>
+          <p className="text-sm text-slate-500 w-3/4">
+            We use a combination of research-backed teaching methods and
+            delightful content to create courses that effectively teach reading,
+            writing, listening, and speaking skills!
+          </p>
+        </div>
+        {/* 2nd col */}
+        <div>
+          <img src="https://i.ibb.co/rw88Xnf/Digital-growth.png" alt="Growth" />
+        </div>
+      </div>
+      {/* 3rd section of promo */}
+      <div className="my-28 grid lg:grid-cols-2 grid-cols-1 justify-between items-center ">
+        {/* 1st col */}
+        <div>
+          <h1 className="text-5xl tracking-wider font-bold my-3 ps-3 text-[#68d9ae]">
+            stay motivated
+          </h1>
+          <p className="text-sm text-slate-500 w-3/4">
+            We make it easy to form a habit of language learning with game-like
+            features, fun challenges, and reminders from our friendly mascot,
+            Duo the owl.
+          </p>
+        </div>
+        {/* 2nd col */}
+        <div>
+          <img
+            src="https://i.ibb.co/rs3YHMP/airplane-animation.gif"
+            alt="Air plane"
+          />
+        </div>
       </div>
     </div>
   );
