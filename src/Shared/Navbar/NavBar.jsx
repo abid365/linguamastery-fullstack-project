@@ -59,7 +59,7 @@ const NavBar = () => {
         pauseOnHover
         theme="dark"
       />
-      <div className="navbar mb-5 px-5 py-5 border border-b=2 lg:flex lg:items-center lg:justify-between hidden bg-[#F8F8FF]">
+      <nav className="mb-5 px-5 py-5 border border-b=2 lg:flex lg:items-center lg:justify-between hidden bg-[#F8F8FF]">
         <div className="font-extrabold text-xl">
           <Link to="/" className="text-indigo-500">
             Lingua Mastery
@@ -114,7 +114,7 @@ const NavBar = () => {
             </Link>
           )}
         </div>
-      </div>
+      </nav>
       {/* responsive navbar */}
       <div className="my-5 px-5 w-full ms-1 relative z-50 lg:hidden">
         <div className="font-bold text-2xl flex justify-between items-center">

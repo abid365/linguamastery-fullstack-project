@@ -7,10 +7,10 @@ import { FreeMode, Pagination } from "swiper";
 
 const TopSlider = () => {
   return (
-    <div className="mt-40 lg:grid lg:gap-0 lg:grid-cols-3 lg:grid-flow-row-dense lg:items-center">
+    <div className="mt-40 lg:grid lg:gap-0 lg:grid-cols-3 grid-cols-1 lg:grid-flow-row lg:items-start">
       {/* left column */}
       <div>
-        <div className="w-fit relative">
+        <div className="w-fit relative lg:mt-5">
           <h1 className="capitalize text-6xl text-black font-bold">
             top ranked<br></br> courses
           </h1>
@@ -24,17 +24,17 @@ const TopSlider = () => {
             learn the
             <br></br> most requested digital courses
           </p>
-          <div className="flex gap-2 mt-4">
-            <div className="badge badge-outline pt-2">Spanish</div>
-            <div className="badge badge-outline pt-2">বাংলা</div>
-            <div className="badge badge-outline pt-2">Arabic</div>
+          <div className="flex gap-2 mt-5">
+            <div className="badge badge-outline p-2">Spanish</div>
+            <div className="badge badge-outline p-2">বাংলা</div>
+            <div className="badge badge-outline p-2">Arabic</div>
           </div>
         </div>
       </div>
       {/* swiper slider */}
-      <div className="mt-20 lg:mt-0 lg:col-span-2">
+      <div className="mt-20 lg:mt-0 lg:col-span-2 lg:w-full w-full h-max">
         <Swiper
-          slidesPerView={3}
+          slidesPerView={2}
           spaceBetween={30}
           freeMode={true}
           pagination={{

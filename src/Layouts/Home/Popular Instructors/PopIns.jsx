@@ -13,7 +13,7 @@ const PopIns = () => {
   }, []);
 
   return (
-    <div className="my-20 pt-40 pb-5 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center place-items-center rounded-2xl">
+    <div className="my-14 py-28 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center place-items-center rounded-2xl">
       {/* first grid item */}
       <div className="lg:order-first order-last">
         <div className="overflow-x-auto border-2 p-1 rounded-2xl border-slate-50 shadow-lg">
@@ -23,7 +23,7 @@ const PopIns = () => {
                 <th>Name</th>
                 <th>Enrolled Students</th>
                 <th>Role</th>
-                <th>Details</th>
+                {/* <th>Details</th> */}
               </tr>
             </thead>
             {popIns.map((instructor) => (

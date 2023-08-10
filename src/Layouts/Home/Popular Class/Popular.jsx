@@ -24,7 +24,7 @@ const Popular = () => {
       <p className="text-center mt-2">
         Master the World's Languages with Our Diverse Language Courses!
       </p>
-      <div className="mt-10 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 place-items-center lg:ml-5 ml-auto">
+      <div className="mt-10 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 place-items-center">
         {classes.map(
           (sclass) => (
             <SingleClass

@@ -9,7 +9,7 @@ import { MdOutlineStart } from "react-icons/md";
 
 const Home = () => {
   return (
-    <div className="my-10 mx-5">
+    <div className="my-10 px-5">
       <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
         {/* 1st column */}
         <div>
@@ -44,8 +44,13 @@ const Home = () => {
       <Learning></Learning>
       <TopSlider></TopSlider>
       <Popular></Popular>
-      <PopIns></PopIns>
-      <Promo></Promo>
+      <div className="bg-gradient-to-l from-white via-[#eaf4fc] to-white">
+        <PopIns></PopIns>
+      </div>
+      <div className="bg-gradient-to-r from-white via-[#F8F8FF] to-white">
+        <Promo></Promo>
+      </div>
+
       <WhoWeAre></WhoWeAre>
     </div>
   );

@@ -19,7 +19,7 @@ const Classes = () => {
           "Tip: It's better to study about you interested subjects pros/cons before you enroll"
         }
       ></PageTitle>
-      <div className="my-10 mx-auto grid grid-cols-1 gap-4 lg:grid-cols-3 lg:ml-16 ml-7">
+      <div className="my-10 grid grid-cols-1 gap-4 lg:grid-cols-3 place-items-center">
         {activeCourses.map((course) => (
           <AvailableClass course={course} key={course._id}></AvailableClass>
         ))}
