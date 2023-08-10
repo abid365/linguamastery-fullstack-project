@@ -2,7 +2,10 @@ import React from "react";
 
 const Promo = () => {
   return (
-    <div className="my-40">
+    <div className="my-40 border-t-2 border-slate-300">
+      <h1 className="text-5xl font-bold text-center pt-20">
+        Why Choose Lingua Mastery?
+      </h1>
       {/* 1st section of promo */}
       <div className="my-28 grid lg:grid-cols-2 grid-cols-1 justify-between items-center ">
         {/* 1st col */}
@@ -56,7 +59,7 @@ const Promo = () => {
           <p className="text-sm text-slate-500 w-3/4">
             We make it easy to form a habit of language learning with game-like
             features, fun challenges, and reminders from our friendly mascot,
-            Duo the owl.
+            Linda the parrot.
           </p>
         </div>
         {/* 2nd col */}

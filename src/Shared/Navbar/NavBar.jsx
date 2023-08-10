@@ -59,29 +59,41 @@ const NavBar = () => {
         pauseOnHover
         theme="dark"
       />
-      <div className="navbar mb-5 px-5 lg:flex lg:items-center lg:justify-between hidden">
-        <div className="font-bold text-2xl">
+      <div className="navbar mb-5 px-5 py-5 border border-b=2 lg:flex lg:items-center lg:justify-between hidden bg-[#f0fff0]">
+        <div className="font-extrabold text-2xl">
           <Link to="/" className="text-indigo-500">
-            LinguaMastery
+            Lingua Mastery
           </Link>
         </div>
-        <div className="flex gap-5 font-bold">
-          <Link to="/" className="text-slate-500 hover:text-slate-700">
+        <div className="flex gap-5">
+          <Link
+            to="/"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             Home
           </Link>
           <Link
             to="/instructors"
-            className="text-slate-500 hover:text-slate-700"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
           >
             Instructors
           </Link>
-          <Link to="/classes" className="text-slate-500 hover:text-slate-700">
+          <Link
+            to="/classes"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             Classes
           </Link>
-          <Link to="/dashboard" className="text-slate-500 hover:text-slate-700">
+          <Link
+            to="/dashboard"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             Dashboard
           </Link>
-          <Link to="/about" className="text-slate-500 hover:text-slate-700">
+          <Link
+            to="/about"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             About
           </Link>
         </div>
