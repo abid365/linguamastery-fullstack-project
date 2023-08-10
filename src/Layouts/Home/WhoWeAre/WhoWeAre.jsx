@@ -15,12 +15,12 @@ const WhoWeAre = () => {
             <HiPaperAirplane className="text-black inline-block"></HiPaperAirplane>
             Who We Are?
           </h1>
-          <div className="bg-white w-fit px-3 py-2 ">
-            <p className="mt-2 font-bold">
-              We Empower Yourself with Proficiency in<br></br> Multiple
-              Languages through our State-of-the-Art<br></br> Learning Website!"
+          <div className="bg-white w-fit px-3 py-2">
+            <p className="mt-2 text-sm font-bold text-justify">
+              We Empower Yourself with Proficiency in Multiple Languages
+              <br></br> through our State-of-the-Art Learning Website!"
             </p>
-            <p className="mt-2 text-xs">
+            <p className="mt-2 text-xs text-justify">
               🦄 Elevate Your Language Skills: Experience Dynamic<br></br>{" "}
               Learning Adventures and Achieve Fluency on our<br></br>{" "}
               Game-Changing Language Learning Website!<br></br>

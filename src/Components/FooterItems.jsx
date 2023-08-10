@@ -1,10 +1,11 @@
 import React from "react";
 
-const FooterItems = ({ li1, li2, li3, li4, li5, li6 }) => {
-  const commonStyles = `mx-2 my-2 font-bold text-white hover:text-slate-200`;
+const FooterItems = ({ li1, li2, li3, li4, li5, li6, headings }) => {
+  const commonStyles = `my-2 font-bold text-xs hover:text-slate-200 hover:underline cursor-pointer`;
   return (
     <div>
       <ul>
+        <li className="text-xs my-4">{headings}</li>
         <li className={commonStyles}>{li1}</li>
         <li className={commonStyles}>{li2}</li>
         <li className={commonStyles}>{li3}</li>
