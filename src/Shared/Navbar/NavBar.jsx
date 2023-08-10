@@ -59,29 +59,41 @@ const NavBar = () => {
         pauseOnHover
         theme="dark"
       />
-      <div className="navbar mb-5 px-5 lg:flex lg:items-center lg:justify-between hidden">
-        <div className="font-bold text-2xl">
+      <div className="navbar mb-5 px-5 py-5 border border-b=2 lg:flex lg:items-center lg:justify-between hidden bg-[#f0fff0]">
+        <div className="font-extrabold text-2xl">
           <Link to="/" className="text-indigo-500">
-            LinguaMastery
+            Lingua Mastery
           </Link>
         </div>
-        <div className="flex gap-5 font-bold">
-          <Link to="/" className="text-slate-500 hover:text-slate-700">
+        <div className="flex gap-5">
+          <Link
+            to="/"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             Home
           </Link>
           <Link
             to="/instructors"
-            className="text-slate-500 hover:text-slate-700"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
           >
             Instructors
           </Link>
-          <Link to="/classes" className="text-slate-500 hover:text-slate-700">
+          <Link
+            to="/classes"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             Classes
           </Link>
-          <Link to="/dashboard" className="text-slate-500 hover:text-slate-700">
+          <Link
+            to="/dashboard"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             Dashboard
           </Link>
-          <Link to="/about" className="text-slate-500 hover:text-slate-700">
+          <Link
+            to="/about"
+            className="text-slate-500 hover:text-slate-700 hover:underline"
+          >
             About
           </Link>
         </div>
@@ -96,7 +108,7 @@ const NavBar = () => {
           ) : (
             <Link
               to="/login"
-              className=" pt-2 pb-1 px-3 font-bold border border-slate-700 rounded-2xl bg-white opacity-70 hover:bg-black hover:text-white hover:shadow-md"
+              className=" pt-2 pb-1 px-3 font-bold border border-slate-700 rounded-lg bg-white opacity-70 hover:bg-black hover:text-white hover:shadow-md"
             >
               Log in
             </Link>
@@ -116,7 +128,7 @@ const NavBar = () => {
               Menu
             </button>
             {menuOpen && (
-              <ul className="absolute dropdown-content border-2 border-slate-800 menu p-2 right-4 mt-3 shadow bg-base-100 rounded-box w-40 text-center px-6">
+              <ul className="absolute dropdown-content border-2 border-slate-800 menu p-2 right-4 mt-3 shadow bg-white rounded-box w-40 text-center px-6">
                 <li className="my-1">
                   <Link to="/">Home</Link>
                 </li>

@@ -13,9 +13,9 @@ const PopIns = () => {
   }, []);
 
   return (
-    <div className="my-20 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+    <div className="my-20 py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       {/* first grid item */}
-      <div>
+      <div className="lg:order-first order-last">
         <div className="overflow-x-auto border-2 p-1 rounded-2xl border-slate-50 bg-slate-100 shadow-lg">
           <table className="table md:table-sm lg:table-md">
             <thead>
@@ -38,10 +38,10 @@ const PopIns = () => {
       {/* second grid item */}
       <div className="flex flex-col items-start gap-5">
         <div>
-          <h1 className="text-5xl font-bold capitalize text-justify">
+          <h1 className="lg:text-5xl md:text-5xl text-4xl  font-bold capitalize">
             Our Most popular<br></br> instructors
           </h1>
-          <p className="text-justify text-xs pr-3 mt-4">
+          <p className="text-justify text-xs text-bold pr-3 mt-4">
             The best instructors inspire with knowledge and passion,<br></br>{" "}
             fostering growth and curiosity. They engage students through
             clarity,
@@ -51,7 +51,7 @@ const PopIns = () => {
           </p>
         </div>
         <div className="flex flex-col items-start gap-7">
-          <div className="mt-5 border p-4 bg-indigo-400 border-slate-800 rounded-xl w-fit">
+          <div className="mt-5 border p-4 bg-gradient-to-r from-indigo-300 via-purple-400 to-indigo-500 shadow-xl border-slate-50 rounded-xl w-fit">
             <h1 className="text-lg text-white font-bold">
               Schedule with mentor
             </h1>
@@ -61,7 +61,7 @@ const PopIns = () => {
             </p>
           </div>
           <div className="mt-2 w-fit">
-            <h1 className="font-semibold underline">Join Our Community:</h1>
+            <h1 className="font-bold text-xl">Join Our Community:</h1>
             <div className="mt-3 flex gap-2">
               <Link>
                 <BsTwitter className="text-3xl text-sky-300"></BsTwitter>
