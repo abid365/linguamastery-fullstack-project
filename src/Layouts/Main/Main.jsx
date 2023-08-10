@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import NavBar from "../../Shared/Navbar/NavBar";
 import Footer from "../../Shared/Footer/Footer";
+
+const [homeLoader, setHomeLoader] = useState(true);
+useEffect(() => {
+  setTimeout(() => {
+    setHomeLoader(false);
+  }, 3000);
+}, []);
 
 const Main = () => {
   return (

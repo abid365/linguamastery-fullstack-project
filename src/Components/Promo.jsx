@@ -12,7 +12,7 @@ const Promo = () => {
   const pStyle = `text-sm my-1`;
 
   return (
-    <div className="my-40 py-24 grid lg:grid-cols-2 grid-cols-1 bg-[#FFFAFA]">
+    <div className="my-40 py-24 grid lg:grid-cols-2 grid-cols-1">
       {/* What we provide to yo */}
       <div className="px-2 w-fit">
         <p className="text-sm font-bold my-8  text-indigo-400">Services</p>

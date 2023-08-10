@@ -44,12 +44,12 @@ const Home = () => {
       <Learning></Learning>
       <TopSlider></TopSlider>
       <Popular></Popular>
-      <div className="bg-gradient-to-l from-white via-[#eaf4fc] to-white">
-        <PopIns></PopIns>
-      </div>
-      <div className="bg-gradient-to-r from-white via-[#F8F8FF] to-white">
-        <Promo></Promo>
-      </div>
+      {/* <div className="bg-gradient-to-l from-white via-[#eaf4fc] to-white"> */}
+      <PopIns></PopIns>
+      {/* </div> */}
+      {/* <div className="bg-gradient-to-r from-white via-[#F8F8FF] to-white"> */}
+      <Promo></Promo>
+      {/* </div> */}
 
       <WhoWeAre></WhoWeAre>
     </div>

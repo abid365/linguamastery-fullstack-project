@@ -116,8 +116,8 @@ const NavBar = () => {
         </div>
       </nav>
       {/* responsive navbar */}
-      <div className="my-5 px-5 w-full ms-1 relative z-50 lg:hidden">
-        <div className="font-bold text-2xl flex justify-between items-center">
+      <div className="px-5 py-5 w-full ms-1 relative z-50 lg:hidden bg-[#FFFAFA]">
+        <div className="font-bold text-2xl flex justify-between items-center ">
           <div>
             <Link to="/" className="text-indigo-500">
               LinguaMastery
